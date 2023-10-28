@@ -1,8 +1,10 @@
+
+
 const Home = () => {
   return (
     <div className='header'>
       <div className='home-content'>
-        <h1>This is home</h1>
+        <h1>In A Galaxy Far Far Away</h1>
       </div>
     </div>
   );
