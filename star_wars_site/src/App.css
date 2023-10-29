@@ -1,15 +1,49 @@
+ 
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
 .page {
-  background-color: #262626;
+  margin: 30px;
+  /* background-color: #262626; */
 }
 
-.starship-card {
+/* Header and Nav */
+
+.header {
+  background-color: gray;
+}
+
+.title-nav {
+  background-color: darkgreen;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.nav > .link {
+  margin-left: 13px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Home Page */
+
+/* Grid Layout */
+.outer {
+  background-color: #161616;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
   margin: 20px;
   padding: 10px;
   background-color: #363636;

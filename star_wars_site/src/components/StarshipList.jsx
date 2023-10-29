@@ -1,15 +1,14 @@
-
 export default function StarshipList (props) {
     // console.log(props)
     if (!props.starships.length === 0) {
         return (
-            <h1>loading...</h1>
+            <h2 className="loading">loading...</h2>
         )
     } else {
         return (
-            <div className="starship-outer">
+            <div className="starship-outer outer">
                 {props.starships.map((ship, index)=>(
-                    <div className="starship-card" key={index}>
+                    <div className="starship-card card" key={index}>
                         <h2>{ship.name}</h2>
                         <div className="ship-basics">
                             <div>Manufactor: {ship.manufacturer}</div>
@@ -17,6 +16,7 @@ export default function StarshipList (props) {
                             <div>Class: {ship.class}</div>
                         </div>
                         <div className="ship-techinal">
+                            <h3>Technical Stats</h3>
                             <div>Length: {ship.length}</div>
                             <div>Max Speed: {ship.max_atmosphering_speed}</div>
                         </div>
