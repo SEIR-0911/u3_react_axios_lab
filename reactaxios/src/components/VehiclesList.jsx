@@ -4,41 +4,42 @@ import { useNavigate } from "react-router-dom"
 import { BASE_URL } from '../globals'
 
 export default function VehiclesList() {
-    const [vehicles, setVehicles] = useState([])
-    const navigate = useNavigate()
+  const [vehicles, setVehicles] = useState([])
+  const navigate = useNavigate()
 
-    useEffect(() => {
-        const getVehicles = async () => {
-            try {
-                const response = await axios.get(`${BASE_URL}starships`)
-                setStarships(response.data.results)
-            } catch (error) {
-                console.error("Error fetching Starship data:", error)
-            }
-        }
-        getStarships()
-    }, [])
-
-    const showShip = (starshipUrl) => {
-        navigate(`${encodeURIComponent(starshipUrl)}`)
+  useEffect(() => {
+    const getVehicles = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}vehicles`)
+        setVehicles(response.data.results)
+      } catch (error) {
+        console.error("Error fetching Vehicle data:", error)
+      }
     }
+    getVehicles()
+  }, [])
 
-    if (starships.length === 0) {
-        return <h2>Loading...</h2>
-    } else {
-        return (
-            <div className="starship">
-                <h2>List of Starships</h2>
-                {starships.map((starship) => (
-                    <div key={starship.name} onClick={() => showShip(starship.url)} className="card">
-                        <h3>{starship.name}</h3>
-                        <p>Model: {starship.model}</p>
-                        <p>Class: {starship.starship_class}</p>
-                        <p>Crew: {starship.crew}</p>
-                        <p>URL: {starship.url}</p>
-                    </div>
-                ))}
-            </div>
-        )
-    }
+  const showVehicle = (vehicleUrl) => {
+    navigate(`${encodeURIComponent(vehicleUrl)}`)
+  }
+
+  if (vehicles.length === 0) {
+    return <h2>Loading...</h2>
+  } else {
+    return (
+      <div className="vehicles">
+        <h2>List of Vehicles</h2>
+        {vehicles.map((vehicle) => (
+          <div key={vehicle.name} onClick={() => showVehicle(vehicle.url)} className="card">
+            <h3>{vehicle.name}</h3>
+            <p>Model: {vehicle.model}</p>
+            <p>Manufacturer: {vehicle.manufacturer}</p>
+            <p>Length: {vehicle.length}m</p>
+            <p>Max Speed: {vehicle.max_atmosphering_speed} kph</p>
+            <p>Passengers: {vehicle.passengers}</p>
+          </div>
+        ))}
+      </div>
+    )
+  }
 }

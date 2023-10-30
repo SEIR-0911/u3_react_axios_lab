@@ -43,7 +43,7 @@ function App() {
           <Route path="/FilmsList/:FilmUrl" element={<FilmDetails films={films} />} />
 
           <Route path="/PeopleList" element={<PeopleList people={people} />} />
-          <Route path="/PeopleList/:peopleUrl" element={<PeopleDetails peoples={peoples} />} />
+          <Route path="/PeopleList/:peopleUrl" element={<PeopleDetails people={people} />} />
 
           <Route path="/PlanetsList" element={<PlanetsList planets={planets} />} />
           <Route path="/PlanetsList/:planetUrl" element={<PlanetDetails planets={planets} />} />

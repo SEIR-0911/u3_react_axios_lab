@@ -30,7 +30,7 @@ export default function PlanetsList() {
       <div className="planet">
         <h2>List of Planets</h2>
         {planets.map((planet) => (
-          <div key={planet.name} onClick={() => showShip(planet.url)} className="card">
+          <div key={planet.name} onClick={() => showPlanet(planet.url)} className="card">
             <h3>{planet.name}</h3>
             <p>Rotation Period: {planet.rotation_period} hours</p>
             <p>Orbital Period: {planet.orbital_period} days</p>
