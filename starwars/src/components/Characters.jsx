@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import {BASE_URL} from '../../global'
+import { useNavigate } from "react-router-dom";
 
 
 const CharacterList = () => {
@@ -16,6 +17,12 @@ const CharacterList = () => {
       };
       getCharacter();
     }, []);
+
+    let navigate = useNavigate()
+
+    const showCharacter = (key) => {
+      navigate(`${key}`)
+    }
   
     if (character.length === 0) {
       console.log("loading...");
@@ -27,8 +34,8 @@ const CharacterList = () => {
     } else {
       return (
         <div className='character'>
-          {character.map((character, index) => (
-            <div className="characternfodiv" key={index}>
+          {character.map((character, key) => (
+            <div className="characternfodiv" onClick={()=>showCharacter(key)} key={key}>
               <h2>Name: {character.name}</h2>
 
             </div>

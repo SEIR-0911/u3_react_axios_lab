@@ -4,6 +4,8 @@ import Films from './Films'
 import Character from './Characters'
 import Home from './Home'
 import Header from './Header'
+import StarshipPage from './StarshipPage'
+import CharacterPage from './CharacterPage'
 
 
 
@@ -17,8 +19,10 @@ function Main () {
                 <Header/>
             </div>
             <Routes>
-                <Route path='/Starshiplist' element={<StarshipList/>}/>
+                <Route path='/StarshipList' element={<StarshipList/>}/>
+                <Route path='/StarshipList/:id' element={<StarshipPage/>}/>
                 <Route path='/Characters' element={<Character/>}/>
+                <Route path='/Characters/:id' element={<CharacterPage/>}/>
                 <Route path='/Films' element={<Films/>} />
                 <Route path='/' element={<Home/>}/>
             </Routes>
