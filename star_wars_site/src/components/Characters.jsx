@@ -1,4 +1,11 @@
+import { Link, useNavigate } from "react-router-dom"
+
 export default function Characters (props) {
+    let navigate = useNavigate()
+    const showCharacter = (person) => {
+        navigate(`${person.name}`)
+    }
+    
     console.log(props.characters)
     if (props.characters.length === 0){
         return (
@@ -10,7 +17,7 @@ export default function Characters (props) {
                 <h1 className="page-head">Characters</h1>
                 <div className="outer">
                     {props.characters.map((person, index)=>(
-                        <div className="character-card card" key={index}>
+                        <div className="character-card card" onClick={()=>showCharacter(person)} key={index}>
                             <h2>{person.name}</h2>
                             <div className="character-basics">
                                 <div>Hair Color: {person.hair_color}</div>
@@ -20,6 +27,7 @@ export default function Characters (props) {
                             </div>
                         </div>
                     ))}
+                    <button className="go-back"><Link to="/">Home</Link></button>
                 </div>
             </div>
         )

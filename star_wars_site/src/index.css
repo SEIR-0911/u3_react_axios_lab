@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "Distant Galaxy";
+  src: local("Distant Galaxy"), url("./assets/SfDistantGalaxy-0l3d.ttf") format("truetype");
+  font-weight: 400;
+}
+
 :root {
-  font-family: 'Anonymous Pro', monospace;
+
+  font-family: 'PT Sans', sans-serif;
   /* line-height: 1.5; */
   font-weight: 400;
 
@@ -11,6 +18,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+h1 {
+  font-family: 'Distant Galaxy', 'PT Sans', sans-serif;
 }
 
 @keyframes move-background {

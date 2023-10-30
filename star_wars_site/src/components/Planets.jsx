@@ -1,4 +1,10 @@
+import { Link, useNavigate } from 'react-router-dom'
+
 export default function Planets (props) {
+    let navigate = useNavigate()
+    const showPlanet = (planet) => {
+        navigate(`${planet.name}`)
+    }
     // console.log(props)
     if (props.planets.length === 0) {
         return (
@@ -10,7 +16,7 @@ export default function Planets (props) {
                 <h1 className="page-head">Planets</h1>
                 <div className="outer">
                     {props.planets.map((planet, index)=>(
-                        <div className="planets-card card" key={index}>
+                        <div className="planets-card card" onClick={() => showPlanet(planet)} key={index}>
                             <h2>{planet.name}</h2>
                             <div className="planets-basics">
                                 <div>Climate: {planet.climate}</div>

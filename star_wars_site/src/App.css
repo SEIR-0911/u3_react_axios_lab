@@ -39,22 +39,41 @@
 /* Header and Nav */
 
 /* .header {
-  background-color: pink;
+  background-image: url('./assets/star-wars-backgroud.png');
+  background-size: 100%;
+  background-position: 60%;
+  height: 80vh;
 } */
 
 .title-nav {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
 }
+.title-nav > h1 > .head-link {
+  font-size: 4rem;
+  /* color: #ffdca2; */
+  color: #fdb900;
+  text-decoration: none;
+}
+
+h1 > .head-link:hover {
+  color: lightblue;
+}
+
 .nav > .link {
-  margin-left: 13px;
+  color: white;
+  margin: 0 30px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
+}
+.nav {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fdb900;
 }
 
 /* Home Page */
@@ -71,4 +90,15 @@
   margin: 20px;
   padding: 10px;
   background-color: #363636;
+}
+
+/* Page Styling */
+
+.starship-outer {
+  margin-top: 50px;
+  padding: 20px;
+}
+.page-head {
+  font-size: 3rem;
+  margin-bottom: 50px;
 }

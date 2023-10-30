@@ -8,7 +8,6 @@ import Main from './components/Main'
 function App() {
 
   const [starships, setStarships] = useState([])
-  const [selectedStarship, setSeceltedStarship] = useState(null)
   const [planets, setPlanets] = useState([])
   const [characters, setCharacters] = useState([])
   const [films, setFilms] = useState([])
