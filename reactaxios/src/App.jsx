@@ -42,20 +42,20 @@ function App() {
           <Route path="/FilmsList" element={<FilmsList films={films} />} />
           <Route path="/FilmsList/:FilmUrl" element={<FilmDetails films={films} />} />
 
-          {/* <Route path="/PeopleList" element={<PeopleList people={people} />} />
-          <Route path="/PeopleList/:peopleUrl" element={<PeopleDetails peoples={peoples} />} /> */}
+          <Route path="/PeopleList" element={<PeopleList people={people} />} />
+          <Route path="/PeopleList/:peopleUrl" element={<PeopleDetails peoples={peoples} />} />
 
-          {/* <Route path="/PlanetsList" element={<PlanetsList planets={planets} />} />
-          <Route path="/PlanetsList/:planetUrl" element={<PlanetDetails planets={planets} />} /> */}
+          <Route path="/PlanetsList" element={<PlanetsList planets={planets} />} />
+          <Route path="/PlanetsList/:planetUrl" element={<PlanetDetails planets={planets} />} />
 
-          {/* <Route path="/SpeciesList" element={<SpeciesList species={species} />} />
-          <Route path="/SpeciesList/:speciesUrl" element={<SpeciesDetails species={species} />} /> */}
+          <Route path="/SpeciesList" element={<SpeciesList species={species} />} />
+          <Route path="/SpeciesList/:speciesUrl" element={<SpeciesDetails species={species} />} />
 
           <Route path="/StarshipList" element={<StarshipsList starships={starships} />} />
           <Route path="/StarshipList/:starshipUrl" element={<ShipDetails starships={starships} />} />
 
-          {/* <Route path="/VehiclesList" element={<VehiclesList vehicles={vehicles} />} />
-          <Route path="/VehiclesList/:vehicleUrl" element={<VehicleDetails vehicles={vehicles} />} /> */}
+          <Route path="/VehiclesList" element={<VehiclesList vehicles={vehicles} />} />
+          <Route path="/VehiclesList/:vehicleUrl" element={<VehicleDetails vehicles={vehicles} />} />
         </Routes>
       </main>
     </div>

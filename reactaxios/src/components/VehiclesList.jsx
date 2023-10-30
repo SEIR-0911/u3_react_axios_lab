@@ -3,44 +3,42 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from '../globals'
 
-export default function VehiclesList(){
+export default function VehiclesList() {
+    const [vehicles, setVehicles] = useState([])
+    const navigate = useNavigate()
 
-//setting our state for data to be pulled
-const [vehicles, setVehicles] = useState([])
-
-useEffect(()=>{
-  const getVehicles = async() => {
-    const response = await axios.get(`${BASE_URL}vehicles`)
-    setVehicles(response.data.results)
-    console.log(response)
-  }
-  getVehicles()
-},[])
-
-let navigate = useNavigate()
-
-const showVehicles = (key) => {
-  navigate(`${key}`)
-}
-
-if (vehicles.length === 0) {
-  return <h2>Loading Please Wait...</h2>
-} else {
-    return(
-        <div className="vehicles">
-            <h2>List of Vehicles</h2>
-            {
-            vehicles.map((vehicle, key) => (
-                <div key={vehicle.name} onClick={()=>showVehicles(key)} className="card">
-                <h3>{vehicle.name}</h3>
-                <p>Model: {vehicle.model}</p>
-                <p>Manufacturer: {vehicle.manufacturer}</p>
-                <p>Length: {vehicle.length}m</p>
-                <p>Max Speed: {vehicle.max_atmosphering_speed} kph</p>
-                <p>Passengers: {vehicle.passengers}</p>
-                </div>
-            ))
+    useEffect(() => {
+        const getVehicles = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}starships`)
+                setStarships(response.data.results)
+            } catch (error) {
+                console.error("Error fetching Starship data:", error)
             }
-        </div>
-    )
-}}
+        }
+        getStarships()
+    }, [])
+
+    const showShip = (starshipUrl) => {
+        navigate(`${encodeURIComponent(starshipUrl)}`)
+    }
+
+    if (starships.length === 0) {
+        return <h2>Loading...</h2>
+    } else {
+        return (
+            <div className="starship">
+                <h2>List of Starships</h2>
+                {starships.map((starship) => (
+                    <div key={starship.name} onClick={() => showShip(starship.url)} className="card">
+                        <h3>{starship.name}</h3>
+                        <p>Model: {starship.model}</p>
+                        <p>Class: {starship.starship_class}</p>
+                        <p>Crew: {starship.crew}</p>
+                        <p>URL: {starship.url}</p>
+                    </div>
+                ))}
+            </div>
+        )
+    }
+}

@@ -13,7 +13,7 @@ export default function StarshipsList() {
                 const response = await axios.get(`${BASE_URL}starships`)
                 setStarships(response.data.results)
             } catch (error) {
-                console.error("Error fetching starships data:", error)
+                console.error("Error fetching Starship data:", error)
             }
         }
         getStarships()

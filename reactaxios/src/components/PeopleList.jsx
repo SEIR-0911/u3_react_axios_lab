@@ -4,39 +4,38 @@ import { useNavigate } from "react-router-dom"
 import { BASE_URL } from '../globals'
 
 export default function PeopleList(){
-
-//setting our state for data to be pulled
-const [people, setPeople] = useState([])
-
+  const [people, setPeople] = useState([])
+  const navigate = useNavigate()
+  
 useEffect(()=>{
   const getPeople = async() => {
+    try {
     const response = await axios.get(`${BASE_URL}people`)
     setPeople(response.data.results)
     console.log(response)
+    } catch (error) {
+      console.error("Error fetching People data:", error)
+    }
   }
   getPeople()
 },[])
 
-let navigate = useNavigate()
-
-const showPeople = (key) => {
-  navigate(`${key}`)
+const showPeople = (peopleUrl) => {
+  navigate(`${encodeURIComponent(peopleUrl)}`)
 }
 
 if (people.length === 0) {
-  return <h2>Loading Please Wait...</h2>
+  return <h2>Loading...</h2>
 } else {
     return(
         <div className="people">
             <h2>List of People</h2>
-            {
-            people.map((people, key) => (
-                <div key={people.name} onClick={()=>showPeople(key)} className="card">
+            {people.map((people) => (
+                <div key={people.name} onClick={()=>showPeople(people.url)} className="card">
                 <h3>{people.name}</h3>
                 <p>Height: {people.height}cm</p>
-                <p>Mass: {people.mass}kg</p>
+                <p>Weight: {people.mass}kg</p>
                 <p>Birth Year: {people.birth_year}</p>
-                <p>Gender: {people.gender}</p>
                 </div>
             ))
             }

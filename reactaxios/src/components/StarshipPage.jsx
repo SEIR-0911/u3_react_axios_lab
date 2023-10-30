@@ -30,7 +30,7 @@ export default function StarshipPage() {
                     <p>URL: {starship.url}</p>
                 </div>
             ) : (
-                <p>Loading starship details...</p>
+                <p>Loading Starship Details...</p>
             )}
         </div>
     )
