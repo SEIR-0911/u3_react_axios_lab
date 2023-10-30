@@ -20,12 +20,11 @@ export default function StarshipsList() {
     }, [])
 
     const showShip = (starshipUrl) => {
-
         navigate(`${encodeURIComponent(starshipUrl)}`)
     }
 
     if (starships.length === 0) {
-        return <h2>Loading Please Wait...</h2>
+        return <h2>Loading...</h2>
     } else {
         return (
             <div className="starship">

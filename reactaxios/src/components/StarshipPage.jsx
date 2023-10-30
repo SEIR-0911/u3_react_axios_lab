@@ -8,7 +8,6 @@ export default function StarshipPage() {
     useEffect(() => {
         const fetchStarshipDetails = async () => {
             try {
-
                 const response = await axios.get(decodeURIComponent(starshipUrl))
                 setStarship(response.data)
             } catch (error) {

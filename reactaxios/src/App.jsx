@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { BASE_URL } from './globals'
 import './App.css'
 
 // components
@@ -16,7 +15,14 @@ import StarshipsList from './components/StarshipList'
 import VehiclesList from './components/VehiclesList'
 
 // components p2
+import FilmDetails from './components/FilmPage'
+import PeopleDetails from './components/PeoplePage'
+import PlanetDetails from './components/PlanetPage'
+import SpeciesDetails from './components/SpeciesPage'
 import ShipDetails from './components/StarshipPage'
+import VehicleDetails from './components/VehiclePage'
+
+
 
 function App() {
   const [films, setFilms] = useState('')
@@ -32,13 +38,24 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          
           <Route path="/FilmsList" element={<FilmsList films={films} />} />
-          <Route path="/PeopleList" element={<PeopleList people={people} />} />
-          <Route path="/PlanetsList" element={<PlanetsList planets={planets} />} />
-          <Route path="/SpeciesList" element={<SpeciesList species={species} />} />
+          <Route path="/FilmsList/:FilmUrl" element={<FilmDetails films={films} />} />
+
+          {/* <Route path="/PeopleList" element={<PeopleList people={people} />} />
+          <Route path="/PeopleList/:peopleUrl" element={<PeopleDetails peoples={peoples} />} /> */}
+
+          {/* <Route path="/PlanetsList" element={<PlanetsList planets={planets} />} />
+          <Route path="/PlanetsList/:planetUrl" element={<PlanetDetails planets={planets} />} /> */}
+
+          {/* <Route path="/SpeciesList" element={<SpeciesList species={species} />} />
+          <Route path="/SpeciesList/:speciesUrl" element={<SpeciesDetails species={species} />} /> */}
+
           <Route path="/StarshipList" element={<StarshipsList starships={starships} />} />
           <Route path="/StarshipList/:starshipUrl" element={<ShipDetails starships={starships} />} />
-          <Route path="/VehiclesList" element={<VehiclesList vehicles={vehicles} />} />
+
+          {/* <Route path="/VehiclesList" element={<VehiclesList vehicles={vehicles} />} />
+          <Route path="/VehiclesList/:vehicleUrl" element={<VehicleDetails vehicles={vehicles} />} /> */}
         </Routes>
       </main>
     </div>
