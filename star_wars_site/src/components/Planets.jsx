@@ -7,7 +7,7 @@ export default function Planets (props) {
     } else {
         return (
             <div className="planets-outer">
-                <h1>Planets</h1>
+                <h1 className="page-head">Planets</h1>
                 <div className="outer">
                     {props.planets.map((planet, index)=>(
                         <div className="planets-card card" key={index}>

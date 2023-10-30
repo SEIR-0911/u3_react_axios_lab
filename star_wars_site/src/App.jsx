@@ -71,10 +71,10 @@ function App() {
   }, [])
   // console.log(films)
   return (
-    <div className='page'>
-      <Header />
-      <Main starships={starships} planets={planets} characters={characters} films={films}/>
-    </div>
+      <div className='page'>
+        <Header />
+        <Main starships={starships} planets={planets} characters={characters} films={films}/>
+      </div>
   )
 }
 

@@ -6,22 +6,25 @@ export default function StarshipList (props) {
         )
     } else {
         return (
-            <div className="starship-outer outer">
-                {props.starships.map((ship, index)=>(
-                    <div className="starship-card card" key={index}>
-                        <h2>{ship.name}</h2>
-                        <div className="ship-basics">
-                            <div>Manufactor: {ship.manufacturer}</div>
-                            <div>Model: {ship.model}</div>
-                            <div>Class: {ship.class}</div>
+            <div className="starship-outer">
+                <h1 className="page-head">Starships</h1>
+                <div className="outer">
+                    {props.starships.map((ship, index)=>(
+                        <div className="starship-card card" key={index}>
+                            <h2>{ship.name}</h2>
+                            <div className="ship-basics">
+                                <div>Manufactor: {ship.manufacturer}</div>
+                                <div>Model: {ship.model}</div>
+                                <div>Class: {ship.class}</div>
+                            </div>
+                            <div className="ship-techinal">
+                                <h3>Technical Stats</h3>
+                                <div>Length: {ship.length}</div>
+                                <div>Max Speed: {ship.max_atmosphering_speed}</div>
+                            </div>
                         </div>
-                        <div className="ship-techinal">
-                            <h3>Technical Stats</h3>
-                            <div>Length: {ship.length}</div>
-                            <div>Max Speed: {ship.max_atmosphering_speed}</div>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         )
     }

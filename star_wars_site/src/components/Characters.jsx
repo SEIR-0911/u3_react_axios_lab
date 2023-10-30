@@ -7,7 +7,7 @@ export default function Characters (props) {
     } else {
         return (
             <div className="characters-outer">
-                <h1>Characters</h1>
+                <h1 className="page-head">Characters</h1>
                 <div className="outer">
                     {props.characters.map((person, index)=>(
                         <div className="character-card card" key={index}>

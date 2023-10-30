@@ -7,7 +7,7 @@ export default function Films (props) {
     } else {
         return (
             <div className="films-outer">
-                <h1>Films</h1>
+                <h1 className="page-head">Films</h1>
                 <div className="outer">
                     {props.films.map((film)=>(
                         <div className="films-card card">

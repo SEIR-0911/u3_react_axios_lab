@@ -1,25 +1,49 @@
- 
-
-#root {
+ #root {
   max-width: 1280px;
-  margin: 0 auto;
-  /* padding: 2rem; */
+  margin: 0;
+  padding: 0;
+  padding: 2rem;
   text-align: center;
+}
+#root::before{
+  content: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png');
+  top: 0;
+  left: 0;
+  /* display: block; */
+  position: fixed;
+  z-index: -1;
+}
+#root::after{
+  content: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png');
+  position: fixed;
+  scale: 2.4;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation:move-background 10s linear infinite;
+}
+
+.base {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: orange;
 }
 
 .page {
   margin: 30px;
-  /* background-color: #262626; */
+  /* background-color: orange; */
 }
 
 /* Header and Nav */
 
-.header {
-  background-color: gray;
-}
+/* .header {
+  background-color: pink;
+} */
 
 .title-nav {
-  background-color: darkgreen;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
