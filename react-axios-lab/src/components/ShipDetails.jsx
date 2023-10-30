@@ -8,6 +8,7 @@ export default function ShipDetails() {
 
     const [ship, setShip] = useState()
 
+
     let {id} = useParams()
 
     useEffect(()=>{
@@ -16,6 +17,7 @@ export default function ShipDetails() {
             setShip(response.data.results[id])
         }
         getShip()
+
     })
 
     return ship ?(
@@ -24,7 +26,7 @@ export default function ShipDetails() {
             <h4>Crew: {ship.crew}</h4>
             <h4>Cargo: {ship.cargo_capacity}</h4>
             <h4>Passengers: {ship.passengers}</h4>
-            <Link to='/StarshipsList'>Return to Starship List</Link>
+            <Link to='/starships'>Return to Starship List</Link>
 
         </div>
     ) : <h3>Loading...</h3>

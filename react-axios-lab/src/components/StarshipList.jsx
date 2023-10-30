@@ -2,8 +2,7 @@ import { useState, useEffect } from "react"
 import { BASE_URL } from "../global"
 import axios from "axios"
 import { useNavigate } from "react-router"
-import { Link } from "react-router-dom"
-import ShipDetails from "./ShipDetails"
+
 
 
 export default function StarshipList(){
@@ -29,7 +28,6 @@ export default function StarshipList(){
             {ships.map((ship, key) => (
                 <div key={key} onClick={()=>showShip(key)} className="card">
                     <h3>{ship.name}</h3>
-                    <Link to='/starships/:id' element={<ShipDetails/>}/>
                 </div>
             ))}
         </div>
