@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: goldenrod;
+}
+
+.Navbar {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: goldenrod;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.Navbar a {
+  color: goldenrod;
+}
+
+.App-main h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  font-size: 2.5rem;
+}
+
+.people,
+.starship,
+.vehicles,
+.species,
+.planets,
+.films {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.people,
+.starship,
+.vehicles,
+.species,
+.planets,
+.films h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: grey;
+  width: 450px;
+  padding: 20px;
+  border: 6px solid black;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px rgb(26, 26, 26);
+  margin: 20px;
+  color: white;
+}
