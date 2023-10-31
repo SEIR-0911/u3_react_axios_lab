@@ -1,0 +1,334 @@
+/* font-family: 'Encode Sans Condensed', sans-serif;
+font-family: 'Gruppo', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Source Code Pro', monospace; */
+
+
+body {
+  background-color: black;
+  color: rgb(253,232,28);
+  background-image: url('./assets/starwars.webp');
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+font-family: 'Gruppo', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  color: rgb(16,17,14);
+  -webkit-text-stroke-color: rgb(253,232,28);
+  -webkit-text-stroke-width: 1px;
+  font-size: 20px;
+  align-items: center;
+  /* padding-bottom: 50px; */
+}
+
+a:hover {
+  text-decoration: line-through;
+  text-decoration-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  color: black;
+  -webkit-text-stroke-color: rgb(253,232,28);
+  -webkit-text-stroke-width: 1px;
+  font-size: 20px;
+  text-shadow: 1px 1px 8px white;
+  align-items: center;
+  /* padding-bottom: 50px; */
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  border: 1px solid yellow;
+  background-image: url('./assets/starwarsposter.jpeg');
+  width: 100vh;
+  height: 200vh;
+  margin-top: 100px;
+  padding: 40px;
+}
+
+.poster {
+  height: auto;
+  width: auto;
+}
+
+.starship {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ship-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px white;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.ship-card:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 30px white;
+  width: 300px;
+  height: 100px;
+}
+
+.vehicles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.vehicle-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px white;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.vehicle-card:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 30px white;
+  width: 300px;
+  height: 100px;
+}
+
+.planets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.planet-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px white;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.planet-card:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 30px white;
+  width: 300px;
+  height: 100px;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px white;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.character-card:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 30px white;
+  width: 300px;
+  height: 100px;
+}
+
+.film {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.film-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px white;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+}
+
+.film-card:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgb(253,232,28);
+  margin: 30px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 30px white;
+  width: 300px;
+  height: 100px;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgb(253,232,28);
+  margin-top: 120px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 60px white;
+}
+
+.detail:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgb(253,232,28);
+  margin-top: 120px;
+  box-shadow: 1px 1px 10px white;
+  border-radius: 12px;
+}
+
+.btn-wrapper {
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(253,232,28) 0 -3px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: transparent 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, transparent 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: white 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, transparent 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: white 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
