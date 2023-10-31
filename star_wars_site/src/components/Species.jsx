@@ -25,6 +25,7 @@ export default function Species (props) {
                                 <div>Average Lifespan: {specie.average_lifespan}</div>
                             </div>
                             <div className="species-img" id={`species${index}`}></div>
+                            <h3 className="more-info">Click for more info</h3>
                         </div>
                     ))}
                 </div>

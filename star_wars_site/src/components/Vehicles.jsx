@@ -19,7 +19,7 @@ export default function Vehicles (props) {
                             <div>Manufacturer: {vehicle.manufacturer}</div>
                             <div>Cost in Credits: {vehicle.cost_in_credits}</div>
                             <div>Max Speed: {vehicle.max_atmosphering_speed}</div>
-                            <h3>Click for more info</h3>
+                            <h3 className="more-info">Click for more info</h3>
                         </div>
                     </div>
                 ))}

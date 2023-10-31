@@ -25,7 +25,7 @@ export default function Characters (props) {
                                 <div>Height: {person.height}</div>
                                 <div>Birth Year: {person.birth_year}</div>
                             </div>
-                            <h3>Click for more info</h3>
+                            <h3 className="more-info">Click for more info</h3>
                         </div>
                     ))}
                 </div>

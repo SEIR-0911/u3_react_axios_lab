@@ -23,6 +23,7 @@ export default function Planets (props) {
                                 <div>Terrain: {planet.terrain}</div>
                                 <div>Population: {planet.population}</div>
                             </div>
+                            <h3 className="more-info">Click for more info</h3>
                         </div>
                     ))}
                 </div>

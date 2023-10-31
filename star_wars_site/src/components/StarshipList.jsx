@@ -29,6 +29,7 @@ export default function StarshipList (props) {
                                 <div>Length: {ship.length}</div>
                                 <div>Max Speed: {ship.max_atmosphering_speed}</div>
                             </div>
+                            <h3 className="more-info">Click for more info</h3>
                         </div>
                     ))}
                 </div>

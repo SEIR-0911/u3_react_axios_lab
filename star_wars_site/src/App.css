@@ -99,8 +99,7 @@ h1 > .head-link:hover {
 }
 
 /* Card Styling for Specific Pages */
-/* species */
-.species-card {
+.species-card, .character-card, .planets-card, .starship-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,9 +110,15 @@ h1 > .head-link:hover {
   margin: 10px;
   text-decoration: underline;
 }
-.specie-info, .vehicle-info {
+.specie-info, .vehicle-info, .character-info, .planet-info, .ship-info {
   font-size: 2rem;
   margin-bottom: 50px;
+}
+.more-info {
+  color: rgb(251, 239, 144);
+}
+.more-info:hover {
+  color: rgb(253, 232, 72);
 }
 
 /* films */
@@ -193,22 +198,8 @@ h1 > .head-link:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.starship-head {
-  background-color: white;
-  background-image: url('https://img.redbull.com/images/q_auto,f_auto/redbullcom/2017/09/20/0bba35af-bf8c-4296-8cbd-1e4ccedfcc6a/star-wars-spaceships-millennium-falcon');
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Art-Images-Star-Wars-Download.jpg');
   background-size: cover;
-  background-position: 50% 57%;
+  background-position: 50% 80%;
 }
-.character-head, .species-head {
-  background-color: white;
-  background-image: url('https://spacequotations.com/wp-content/uploads/2018/09/star-wars-poster.jpg');
-  background-size: cover;
-  background-position: 0 65%;
-}
-.film-head, .planet-head, .vehicle-head {
-  background-color: white;
-  background-image: url('https://images4.alphacoders.com/131/thumb-1920-1313954.jpeg');
-  background-size: cover;
-  background-position: 0 40%;
-}
+/* background-image: url('https://wallpapers.com/images/hd/star-wars-the-force-awakens-7t6s48g4atoa9t44.jpg'); */
