@@ -39,8 +39,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #111;
+  background-color: #000;
 }
+
+
+
+
 
 nav .home-nav {
   font-size: 2.5rem;
@@ -54,18 +58,35 @@ nav .home-nav {
 }
 
 .link-nav {
-  color: #fff;
+  position: relative;
+  text-decoration: none;
+  color: #ddd;
   font-size: 1.3rem;
   font-weight: 500;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
-  transition: all .5s;
-  transform: (0);
+  margin: 0 15px;
+  padding: 5px 5px;
+  letter-spacing: 0.5px;
+}
+
+.link-nav:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 88, 97);
+  box-shadow: 0 0 10px #ffaeae;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.8s;
 }
 
 .link-nav:hover {
-  transform: (1);
-  border-bottom: 4px solid #f0bc00;
+  font-weight: 600;
+  color: #fff;
+}
+ 
+.link-nav:hover:after {
+  width: 100%;
 }
 
 .card-grid {
@@ -74,30 +95,20 @@ nav .home-nav {
 
 .card {
   font-size: 1.5rem;
-  border: 2px solid #000;
   width: 100%;
   justify-content: center;
 }
 
 .details {
-  display: flex;
-  flex-direction: column;
+
   justify-content: center;
   text-align: center;
 }
 
-.open-text {
-  display: flex;
-  flex-shrink: 2;
-}
 
-.card-btn {
-  text-align: center;
-  width: 90%;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 0.5rem;
-}
+
+
+
 
 @media (max-width: 500px) {
 
