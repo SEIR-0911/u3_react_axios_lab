@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-
-import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import ShowStarship from "./ShowShip";
 
-let navigate = useNavigate();
+//let navigate = useNavigate();
 
 const StarshipList = () => {
   const [starships, setStarships] = useState([]);
-
   useEffect(() => {
     const getStarships = async () => {
       let response = await axios.get(`https://swapi.dev/api/starships`);
@@ -18,24 +15,28 @@ const StarshipList = () => {
     getStarships();
   }, []);
 
+  function getLastId(url) {
+    return parseInt(url.split("/").slice(-2, -1)[0], 10);
+  }
+
   return starships.length === 0 ? (
-    <div className='starship'>
+    <div className='loading'>
       <h3>loading...</h3>
     </div>
   ) : (
     <div className='starship'>
-      {starships.map((starship, index) => (
-        <div key={index}>
-          <div key={key} onClick={() => showShip(key)} className='card'>
+      {starships.map((starship, key) => (
+        <div key={key} className='card'>
+          <Link to={`/starships/${getLastId(starship.url)}`}>
             <h3>{starship.name}</h3>
-          </div>
-
-          {/* <div key={key} onClick={() => ShowStarship(key)} className='starship'>
-            <h3>{starship.name}</h3>
-          </div> */}
-
-          {/* to={{ pathname: "/StarshipList", }} >
-            {starship.name} */}
+            <p>
+              Manufacturer: {starship.manufacturer}
+              <br />
+              length: {starship.length},<br />
+              Max Atmospheric speed: {starship.max_atmosphering_speed}
+            </p>
+            <h3>Crew: {starship.crew}</h3>
+          </Link>
         </div>
       ))}
     </div>
