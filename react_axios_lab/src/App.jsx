@@ -7,7 +7,7 @@ import './App.css'
 import { BASE_URL } from './globals'
 
 function App() {
-  const [ships, setShips] = useState([])
+  const [starships, setShips] = useState([])
   const [planets, setPlanets] = useState([])
   const [vehicles, setVehicles] = useState([])
   const [people, setPeople] = useState([])
@@ -75,7 +75,7 @@ function App() {
         <Header></Header>
 
         
-        <Main ships={ships} 
+        <Main starships={starships} 
               planets={planets}
               vehicles={vehicles}
               people={people}

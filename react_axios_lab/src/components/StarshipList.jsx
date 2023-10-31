@@ -1,16 +1,30 @@
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+
 export default function StarshipList(props) {
   // console.log(props)
-  if (!props.ships) {
-    return <h1>Loading Please Wait</h1>;
+
+  let navigate = useNavigate()
+
+  const showShip = (index) => {
+    // console.log('Starship', `${starship.name.replace(' ', "")}`)
+    // navigate(`${starship.name.replace(' ', "")}`)
+    navigate(`${index}`)
+  }
+
+
+  if (props.ships.length === 0) {
+    return <h3>Loading Please Wait</h3>;
   } else {
     return (
-      <div className="StarshipsList">
+      <div className="StarshipsList top-list">
         <h1>Starships</h1>
         {props.ships.map((starship, index) => {
           return (
-            <div className="card" key={index}>
+            <div className="list"  onClick={() => showShip(index)} key={index}>
               <h5>{starship.name}</h5>
-              <p>
+              {/* <p>
                 <strong>Model:</strong> {starship.model}
               </p>
               <p>
@@ -46,7 +60,7 @@ export default function StarshipList(props) {
               </p>
               <p>
                 <strong>Starship Class:</strong> {starship.starship_class}
-              </p>
+              </p> */}
             </div>
           );
         })}
