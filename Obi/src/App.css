@@ -1,0 +1,166 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+/* 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+body {
+  margin: 0; 
+  padding: 0;
+  background-color: #030303;
+  font-family: 'Orbitron', sans-serif;  
+  color: #f4e513; 
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.card, .detail {
+  background-color: #101010;
+  border: 1px solid #00FF00;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card:hover, .detail:hover {
+  transform: scale(1.05);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.detail h2 {
+  margin-bottom: 1em;
+}
+
+.detail p {
+  margin: 0.5em 0;
+}
+
+a {
+  color: #00FF00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #555;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav a {
+  color: #ddd;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.nav a:hover {
+  background-color: #333;
+  color: #00f3ff;
+  box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 30px #00f3ff;
+}
+
+.star-wars-intro {
+  perspective: 400px;
+  height: 800px;
+  overflow: hidden;
+}
+
+.crawl {
+  transform-origin: 50% 100%;
+  animation: crawl 75s linear;
+  transform: rotateX(20deg) translateY(0);
+  position: relative;
+  top: 800px;
+}
+
+@keyframes crawl {
+  0% {
+      transform: rotateX(20deg) translateY(0);
+  }
+  100% {
+      transform: rotateX(20deg) translateY(-4000px);
+  }
+}
+
+.title p, .title h1, .crawl p {
+  text-align: center;
+  position: relative;
+  transform: translateZ(60px);
+}
+
+.title p {
+  font-size: 10em;  
+}
+
+.title h1 {
+  font-size: 7em;   
+  margin: 0;
+}
+
+.crawl p {
+  font-size: 5em;   
+  margin: 0.5em 0;
+}
+
