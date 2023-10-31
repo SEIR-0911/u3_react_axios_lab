@@ -16,7 +16,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #c8db37;
   text-decoration: inherit;
 }
 a:hover {
@@ -24,11 +24,38 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  background: black;
+  overflow: hidden;
+  /* margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  perspective: 400px;
+}
+.scroll-text {
+  font-size: 3vw;
+  line-height: 3em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+  animation: scroll 60s linear forwards;
+}
+
+@keyframes scroll {
+  from {
+    top: 0;
+  }
+  to {
+    top: -7500;
+  }
 }
 
 h1 {

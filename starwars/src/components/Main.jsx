@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import StarshipList from "./StarshipList";
 import ShowShip from "./ShowShip";
+import People from "./People"
 import ErrorNotFoundPage from "./ErrorNotFoundPage";
 
 function Main() {

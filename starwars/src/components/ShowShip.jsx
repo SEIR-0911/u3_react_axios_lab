@@ -29,11 +29,17 @@ const ShowStarship = () => {
       <h2>Name: {starship.name}</h2>
       <h2>Crew: {starship.crew}</h2>
       <h3>Pilots:</h3>
-      {starship.pilots.map((pilot, key) => {
-        <div key={key}>
-          <Link to={`/people/${getLastId(pilot.url)}`}></Link>
-        </div>;
-      })}
+      {starship.pilots.length === 0 ? (
+        <div>No Pilot</div>
+      ) : (
+        starship.pilots.map((pilot, key) => {
+          return (
+            <div key={key}>
+              <Link to={`/people/${getLastId(pilot)}`}>{pilot}</Link>
+            </div>
+          );
+        })
+      )}
 
       <h2>Films: </h2>
       {starship.films.map((film, key) => {
