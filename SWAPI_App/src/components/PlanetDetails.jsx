@@ -9,17 +9,17 @@ import { BASE_URL } from "../global";
 export default function planetDetails() {
   //Here, useParams() is taking the id from what's in the route in Main.js. Destructuring the id to what is at the end of the url in Main.
   //Q. so it dynamically sets the ID to what exactly? The index?
-  //Where I have id written in my routes, should I call it index for consistency?
-  let { id } = useParams();
+  //answer: pulling the specific index of the planet we are clicking on
+  let { index } = useParams();
 
-  //setting up useState
+  //setting up useState: blank before the index of what is clicked is saved
   const [planet, setPlanet] = useState("");
 
   //setting up use effect to do an axios call for planet with specified id
   useEffect(() => {
     const getplanet = async () => {
       const response = await axios.get(`${BASE_URL}/planets`);
-      setPlanet(response.data.results[id]);
+      setPlanet(response.data.results[index]);
     };
     getplanet();
   }, []);

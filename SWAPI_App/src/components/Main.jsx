@@ -21,15 +21,15 @@ export default function Main() {
         component StarshipList when this link /starships is loaded
         <Route path="/" element={<Home />} /> //renders the home component when
         this link / is rendered in the browser
-        <Route path="/starships/:id" element={<StarshipDetails />} />
-        <Route path="/planets/:id" element={<PlanetDetails />} />
+        <Route path="/starships/:index" element={<StarshipDetails />} />
+        <Route path="/planets/:index" element={<PlanetDetails />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/films" element={<Films />} />
-        <Route path="/films/:id" element={<FilmDetails />} />
+        <Route path="/films/:index" element={<FilmDetails />} />
         <Route path="/characters" element={<Characters />} />
-        <Route path="/characters/:id" element={<CharacterDetails />} />
+        <Route path="/characters/:index" element={<CharacterDetails />} />
         <Route path="/vehicles" element={<Vehicles />} />
-        <Route path="/vehicles/:id" element={<VehicleDetails />} />
+        <Route path="/vehicles/:index" element={<VehicleDetails />} />
       </Routes>
     </div>
   );
