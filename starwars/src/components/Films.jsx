@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import {BASE_URL} from '../../global'
+import { useNavigate } from "react-router-dom";
 
 
 const FilmsList = () => {
@@ -16,6 +17,12 @@ const FilmsList = () => {
       };
       getFilms();
     }, []);
+
+    let navigate = useNavigate()
+
+    const showFilm = (key) => {
+      navigate(`${key}`)
+    }
   
     if (films.length === 0) {
       console.log("loading...");
@@ -27,8 +34,8 @@ const FilmsList = () => {
     } else {
       return (
         <div className='film'>
-          {films.map((film, index) => (
-            <div className="filminfodiv" key={index}>
+          {films.map((film, key) => (
+            <div className="card" onClick={()=>showFilm(key)} key={key}>
               <h2>Name: {film.title}</h2>
 
             </div>

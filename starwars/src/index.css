@@ -41,6 +41,10 @@ h1 {
   line-height: 1.1;
 }
 
+.navbar {
+  font-size: 25px;
+}
+
 
 
 @media (prefers-color-scheme: dark) {
