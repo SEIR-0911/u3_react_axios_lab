@@ -1,0 +1,166 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 0;
+  text-align: center;
+
+  font-family: 'Rubik Mono One', monospace;
+}
+
+.home{
+  margin-top:20rem;
+}
+
+.card {
+  padding: 2em;
+  border: 2px solid rgb(255, 255, 173);
+  border-radius: 5px;
+  margin: 2rem;
+  box-shadow: 0 0 5px 5px yellow;
+}
+
+.card:hover {
+  border: 2px solid wheat;
+  box-shadow: 0 0 7px 10px white;
+
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: yellow;
+  padding: 1rem;
+}
+
+.title {
+  font-family: 'Star Wars', sans-serif;
+}
+
+.navLink {
+  margin: .5rem;
+  padding: 3px;
+  background-color: yellow;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background-color: white;
+}
+
+.list {
+  margin-top: 20rem;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+li {
+  list-style-type: none;
+  text-align: left;
+  font-size: 28px;
+
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+}
+
+.back{
+  background-color: yellow;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 3px;
+}
+
+/* logan's magical star background */
+
+.background-container {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -5;
+}
+
+.twinkling {
+  width: 98vw;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  animation: move-background 10s linear infinite;
+
+}
+
+
+@keyframes move-background {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  10% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  20% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  30% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  40% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  50% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  70% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  80% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  90% {
+    transform: translate3d(100px, 0px, 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+}
