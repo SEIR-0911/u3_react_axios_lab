@@ -24,20 +24,15 @@ const showSpecies = (key) => {
 }
 
 if (species.length === 0) {
-    return <h2>Loading Please Wait...</h2>
+    return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="species">
-            <h2>List of Species</h2>
+            
             {
             species.map((species, key) => (
                 <div key={species.name} onClick={()=>showSpecies(key)} className="card">
                 <h3>{species.name}</h3>
-                <p>Classification: {species.classification}</p>
-                <p>Designation: {species.designation}</p>
-                <p>Average height: {species.average_height}cm</p>
-                <p>Homeworld: {species.homeworld}</p>
-                <p>Language: {species.language}</p>
                 </div>
             ))
             }

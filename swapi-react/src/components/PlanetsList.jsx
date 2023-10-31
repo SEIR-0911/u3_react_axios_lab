@@ -24,20 +24,15 @@ const showPlanets = (key) => {
 }
 
 if (planets.length === 0) {
-    return <h2>Loading Please Wait...</h2>
+    return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="planets">
-            <h2>List of Planets</h2>
+            
             {
             planets.map((planet, key) => (
                 <div key={planet.name} onClick={()=>showPlanets(key)} className="card">
                 <h3>{planet.name}</h3>
-                <p>Rotation Period: {planet.rotation_period} hours</p>
-                <p>Orbital Period: {planet.orbital_period} days</p>
-                <p>Diameter: {planet.diameter}m</p>
-                <p>Climate: {planet.climate}</p>
-                <p>Terrain: {planet.terrain}</p>
                 </div>
             ))
             }

@@ -1,3 +1,3 @@
-const Home = () => {return <h2 className="Home">Do or Do Not.. There is no Try</h2>}
+const Home = () => {return <h2 className="Home">I WILL DO WHAT I MUST..</h2>}
 
 export default Home

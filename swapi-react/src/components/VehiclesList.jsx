@@ -24,20 +24,15 @@ const showVehicles = (key) => {
 }
 
 if (vehicles.length === 0) {
-  return <h2>Loading Please Wait...</h2>
+  return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="vehicles">
-            <h2>List of Vehicles</h2>
+            
             {
             vehicles.map((vehicle, key) => (
                 <div key={vehicle.name} onClick={()=>showVehicles(key)} className="card">
                 <h3>{vehicle.name}</h3>
-                <p>Model: {vehicle.model}</p>
-                <p>Manufacturer: {vehicle.manufacturer}</p>
-                <p>Length: {vehicle.length}m</p>
-                <p>Max Speed: {vehicle.max_atmosphering_speed} kph</p>
-                <p>Passengers: {vehicle.passengers}</p>
                 </div>
             ))
             }

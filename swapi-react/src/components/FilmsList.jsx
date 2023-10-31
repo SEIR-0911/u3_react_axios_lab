@@ -24,20 +24,16 @@ const showFilms = (key) => {
 }
 
 if (films.length === 0) {
-    return <h2>Loading Please Wait...</h2>
+    return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="films">
-            <h2>List of Films</h2>
+            
             {
             films.map((film, key) => (
                 <div key={film.title} onClick={()=>showFilms(key)} className="card">
                 <h3>{film.title}</h3>
                 <p>Episode: {film.episode_id}</p>
-                <p>Director: {film.director} days</p>
-                <p>Producer: {film.producer}m</p>
-                <p>Release Date: {film.release_date}</p>
-                <p>{film.opening_crawl}</p>
                 </div>
             ))
             }

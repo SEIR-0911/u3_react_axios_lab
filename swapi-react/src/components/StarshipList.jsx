@@ -24,18 +24,15 @@ const showShip = (key) => {
 }
 
 if (starships.length === 0) {
-  return <h2>Loading Please Wait...</h2>
+  return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="starship">
-            <h2>List of Starships</h2>
+            
             {
             starships.map((starship, key) => (
                 <div key={starship.name} onClick={()=>showShip(key)} className="card">
                 <h3>{starship.name}</h3>
-                <p>Model: {starship.model}</p>
-                <p>Class: {starship.starship_class}</p>
-                <p>Crew: {starship.crew}</p>
                 </div>
             ))
             }

@@ -24,19 +24,15 @@ const showPeople = (key) => {
 }
 
 if (people.length === 0) {
-  return <h2>Loading Please Wait...</h2>
+  return <h1 className="Loading">Loading Please Wait...</h1>
 } else {
     return(
         <div className="people">
-            <h2>List of People</h2>
+            
             {
             people.map((people, key) => (
                 <div key={people.name} onClick={()=>showPeople(key)} className="card">
                 <h3>{people.name}</h3>
-                <p>Height: {people.height}cm</p>
-                <p>Mass: {people.mass}kg</p>
-                <p>Birth Year: {people.birth_year}</p>
-                <p>Gender: {people.gender}</p>
                 </div>
             ))
             }
