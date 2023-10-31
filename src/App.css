@@ -1,5 +1,5 @@
 body {
-    background-image: url("./src/assets/space.png")
+    background-image: url("./src/assets/space.png");
 }
 
 .card{
@@ -12,7 +12,7 @@ body {
 .detail{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid white;
     width: 700px;
     color: deepskyblue;
     text-wrap: wrap;
@@ -56,6 +56,11 @@ h1, h3 {
     flex-wrap: wrap;
     color: deepskyblue;
     border: 2px white;
+}
+
+.page-title {
+    color: chartreuse;
+    font-size: 85px;
 }
 
 ul{

@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div className='routes-container'>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        {/* <Route path="/" element={<Home/>}/> */}
         <Route path="/starships" element={<StarshipList/>}/>
         <Route path="/films" element={<FilmList/>}/>
         <Route path="/planets" element={<PlanetList/>}/>
