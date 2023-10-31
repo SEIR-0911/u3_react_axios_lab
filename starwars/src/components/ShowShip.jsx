@@ -4,16 +4,23 @@ import axios from "axios";
 
 const ShowStarship = () => {
   const [starship, setStarship] = useState([]);
+  const [people, setPeople] = useState([]);
 
   let { id } = useParams();
 
   useEffect(() => {
+    const getPeople = async () => {
+      const people = await axios.get(`https://swapi.dev/api/people`);
+      console.log(people.data);
+      setPeople(people);
+    };
     const getStarship = async () => {
       const response = await axios.get(`https://swapi.dev/api/starships/${id}`);
       console.log(response.data);
       setStarship(response.data);
     };
     getStarship();
+    getPeople();
   }, []);
 
   function getLastId(url) {
@@ -28,6 +35,7 @@ const ShowStarship = () => {
     <div className='detail'>
       <h2>Name: {starship.name}</h2>
       <h2>Crew: {starship.crew}</h2>
+
       <h3>Pilots:</h3>
       {starship.pilots.length === 0 ? (
         <div>No Pilot</div>
@@ -42,13 +50,17 @@ const ShowStarship = () => {
       )}
 
       <h2>Films: </h2>
-      {starship.films.map((film, key) => {
-        return (
-          <div key={key}>
-            <p>{film}</p>
-          </div>
-        );
-      })}
+      {starship.films.length === 0 ? (
+        <div>No Film</div>
+      ) : (
+        starship.films.map((film, key) => {
+          return (
+            <div key={key}>
+              <Link to={`/films/${getLastId(film)}`}>{film}</Link>
+            </div>
+          );
+        })
+      )}
       <Link to='/starships'> Return to Starship List</Link>
     </div>
   );

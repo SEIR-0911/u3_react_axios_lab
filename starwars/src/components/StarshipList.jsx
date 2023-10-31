@@ -28,7 +28,7 @@ const StarshipList = () => {
       {starships.map((starship, key) => (
         <div key={key} className='card'>
           <Link to={`/starships/${getLastId(starship.url)}`}>
-            <h3>{starship.name}</h3>
+            <h2>{starship.name}</h2>
             <p>
               Manufacturer: {starship.manufacturer}
               <br />

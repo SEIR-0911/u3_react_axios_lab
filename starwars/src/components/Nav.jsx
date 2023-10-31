@@ -23,7 +23,7 @@ const Nav = () => {
             People
           </Link>
         </li>
-        |
+        {/* |
         <li>
           <Link className='nav-li' to='/people' element={<People />}>
             Films
@@ -33,8 +33,8 @@ const Nav = () => {
         <li>
           <Link className='nav-li' to='/people' element={<People />}>
             Planets
-          </Link>
-        </li>
+          </Link> 
+        </li>*/}
       </ul>
     </div>
   );

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const People = () => {
+const ShowPeopleById = () => {
   const [people, setPeople] = useState([]);
 
   let { id } = useParams();
 
   useEffect(() => {
     const getStarship = async () => {
-      const response = await axios.get(`https://swapi.dev/api/people`);
+      const response = await axios.get(`https://swapi.dev/api/starships/${id}`);
       console.log(response.data);
       setPeople(response.data);
     };
@@ -44,4 +44,4 @@ const People = () => {
   );
 };
 
-export default People;
+export default ShowPeopleById;
