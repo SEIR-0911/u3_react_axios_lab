@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./images/Millenium_Falcon.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+#root {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  right: 0;
+
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+}
+
+
+
+
+
+nav .home-nav {
+  font-size: 2.5rem;
+  margin: 1rem 2rem;
+  font-weight: bold;
+  color: #f0bc00
+}
+
+.Nav {
+  display: flex;
+}
+
+.link-nav {
+  position: relative;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 15px;
+  padding: 5px 5px;
+  letter-spacing: 0.5px;
+}
+
+.link-nav:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 88, 97);
+  box-shadow: 0 0 10px #ffaeae;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.8s;
+}
+
+.link-nav:hover {
+  font-weight: 600;
+  color: #fff;
+}
+ 
+.link-nav:hover:after {
+  width: 100%;
+}
+
+.card-grid {
+  justify-content: center;
+}
+
+.card {
+  font-size: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.details {
+
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+  .App {
+    background-image: url('./images/Stars.jpeg');
+
+  }
+}
