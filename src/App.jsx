@@ -10,9 +10,18 @@ import FilmList from './components/FilmList'
 import PlanetList from './components/PlanetList'
 import PeopleList from './components/PeopleList'
 
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import Nav from './components/Nav'
+import StarshipPage from './components/StarshipPage'
+import FilmPage from './components/FilmPage'
+import PlanetPage from './components/PlanetPage'
+import PeoplePage from './components/PeoplePage'
+
 
 function App() {
 
+  //setting our state for data to be pulled
   const [starships, setStarships] = useState([])
   const [films, setFilms] = useState([])
   const [planets, setPlanets] = useState([])
@@ -48,17 +57,24 @@ function App() {
       setPeoples(response.data.results)
     }
     getPeoples()
-    console.log (peoples)
   }, [])
 
   return (
     <div>
       <Header/>
       <Main/>
-      <StarshipList starships={starships}/>
-      <FilmList films={films}/>
-      <PlanetList planets={planets}/>
-      <PeopleList peoples={peoples}/>
+        <Routes>
+          <Route path = "/" element = {<Home /> } />
+          {/* We pass in the prop of starships, giving the StarshipList component access to the array of boats in state. */}
+          <Route path = "/starships" element = { <StarshipList starships={starships}/>} />
+          <Route path = "/films" element = { <FilmList films={films}/>} />
+          <Route path = "/planets" element = {<PlanetList planets={planets}/>} />
+          <Route path = "/peoples" element = {<PeopleList peoples={peoples}/>} />
+          <Route path = "/starships/:id" element = { <StarshipPage starships={starships}/>} />
+          <Route path = "/films/:id" element = { <FilmPage films={films}/>} />
+          <Route path = "/planets/:id" element = { <PlanetPage planets={planets}/>} />
+          <Route path = "/peoples/:id" element = { <PeoplePage peoples={peoples}/>} />
+        </Routes>
     </div>
   )
   
