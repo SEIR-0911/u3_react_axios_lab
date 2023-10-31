@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Distant Galaxy";
+  src: local("Distant Galaxy"), url("./assets/SfDistantGalaxy-0l3d.ttf") format("truetype");
+  font-weight: 400;
+}
+
+:root {
+
+  font-family: 'PT Sans', sans-serif;
+  /* line-height: 1.5; */
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+h1 {
+  font-family: 'Distant Galaxy', 'PT Sans', sans-serif;
+}
+
+/* animations */
+
+@keyframes move-background {
+  0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+  10%{ 
+        transform: translate3d(100px, 0px, 0px);  
+    }
+  20%{ 
+        transform: translate3d(0px, 0px, 0px);  
+    }
+  30%{ 
+        transform: translate3d(100px, 0px, 0px);  
+    }
+  40%{ 
+        transform: translate3d(0px, 0px, 0px);  
+    }
+  50%{ 
+        transform: translate3d(100px, 0px, 0px);  
+  }
+  60%{ 
+        transform: translate3d(0px, 0px, 0px);  
+    }
+  70%{ 
+        transform: translate3d(100px, 0px, 0px);  
+    }
+  80%{ 
+        transform: translate3d(0px, 0px, 0px);  
+    }
+  90%{ 
+        transform: translate3d(100px, 0px, 0px);  
+    }
+  100%{ 
+        transform: translate3d(0px, 0px, 0px);  
+    }
+}
+
+@keyframes text-scroll {
+  0% {
+    top: 300px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  /* 25% {
+    transform: translateY(250px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-250px);
+  } */
+  100% {
+    top: -2300px;
+    transform: rotateX(25deg) translateZ(-500px);
+  }
+}
+
+/* Pictures */
+/* species */
+.species-img {
+  margin-top: 20px;
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 20px;
+}
+#species0 {
+  background-image: url('https://www.comingsoon.net/wp-content/uploads/sites/3/2019/12/1c26a74b72df5f698b296f569d12f976.jpg?w=800');
+}
+#species1 {
+  background-image: url('https://www.gamespot.com/a/uploads/screen_kubrick/1578/15789737/3311632-swdroids.jpg');
+}
+#species2 {
+  background-image: url('https://thefifthtrooper.com/wp-content/uploads/2021/07/wookiees.jpg');
+}
+#species3 {
+  background-image: url('https://i.ytimg.com/vi/gI7KD1OYBL0/maxresdefault.jpg');
+}
+#species4 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg');
+}
+#species5 {
+  background-image: url('https://www.looper.com/img/gallery/everything-we-know-about-yodas-species/intro-1574290530.jpg');
+}
+#species6 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/babwa-venomor-main_d6b841df.jpeg?region=237%2C0%2C1445%2C813');
+}
+#species7 {
+  background-image: url('https://www.looper.com/img/gallery/star-wars-the-mon-calamari-explained/intro-1605299609.jpg');
+}
+#species8 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_ewok_01_169_747db03a.jpeg?region=0%2C49%2C1560%2C780');
+}
+#species9 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_sullustan_01_169_01e4c3e0.jpeg?region=5%2C0%2C1170%2C878');
+}
+#species10 {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1625370308166-24PK51CZ3Q0UQT3JGB2S/Alex1.jpeg');
+}
+#species11 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/episode-112-gungan-general_a3e9b_50258ac2.jpeg?region=0,0,2048,1024');
+}
+#species12 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_toydarian_01_169_748d4d11.jpeg?region=0%2C0%2C1560%2C780');
+}
+#species13 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/sebulba_1f3fe180.jpeg?region=5%2C0%2C1840%2C1380');
+}
+#species14 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/twi-lek-main_93917d40.jpeg?region=133%2C0%2C951%2C536');
+}
+#species15 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/acw_ia_77554_37f39ba8.jpeg');
+}
+#species16 {
+  background-image: url('https://i.pinimg.com/originals/54/bb/54/54bb549943e6660398d1a73cf3e07de7.jpg');
+}
+#species17 {
+  background-image: url('https://swrpggm.com/wp-content/uploads/2022/06/Xexto_FE.png.webp');
+}
+#species18 {
+  background-image: url('https://thatstarwarsauthor.files.wordpress.com/2021/08/img_0241.jpg?w=324');
+}
+#species19 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_cerean_01_169_61617903.jpeg?region=0%2C0%2C1560%2C780');
+}
+#species20 {
+  background-image: url('https://swtorista.com/articles/wp-content/uploads/2021/12/nautolan-_0035_Layer-2.jpg');
+}
+#species21 {
+  background-image: url('https://i.ytimg.com/vi/e-Pia2wQj0E/maxresdefault.jpg');
+}
+#species22 {
+  background-image: url('https://pbs.twimg.com/media/A6u3bqtCMAAs1Yr.jpg');
+}
+#species23 {
+  background-image: url('https://thatstarwarsauthor.files.wordpress.com/2021/01/84b8821f-6ee7-4619-b4a3-120d0a55e482.png');
+}
+#species24 {
+  background-image: url('https://cdn4.whatculture.com/images/2020/10/18dff9819a6ad6b9-600x338.jpg');
+}
+#species25 {
+  background-image: url('https://pm1.aminoapps.com/6180/3f61ebb738c03c61fb9716ab0677750cd88a2f8c_hq.jpg');
+}
+#species26 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/mas-amedda-main_3e450a61.jpeg?region=233%2C0%2C1447%2C813');
+}
+#species27 {
+  background-image: url('https://i.pinimg.com/originals/93/44/58/9344580609d6df6f971f743f6583f60d.jpg');
+}
+#species28 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_mirialan_01_169_958106f8.jpeg?region=0%2C49%2C1560%2C780');
+}
+#species29 {
+  background-image: url('https://365starwars.com/wp-content/uploads/2018/03/Day-83-Cato-Parasitti.jpg');
+}
+#species30 {
+  background-image: url('https://i.pinimg.com/originals/3b/11/81/3b1181e4e1c37fc6ac1d32e4fa4e1556.jpg');
+}
+#species31 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/kaminoan-main-image_8f582a48.jpeg?region=293%2C0%2C1180%2C663');
+}
+#species32 {
+  background-image: url('https://www.syfy.com/sites/syfy/files/styles/amp_featured_image/public/2019/12/wat-tambor-attack-of-the-clones-header.jpg');
+}
+#species33 {
+  background-image: url('https://i.ytimg.com/vi/zISZji9QRVM/maxresdefault.jpg');
+}
+#species34 {
+  background-image: url('https://www.giantfreakinrobot.com/wp-content/uploads/2023/09/Ahsoka-Star-Wars.jpg');
+}
+#species35 {
+  background-image: url('https://i.ytimg.com/vi/zvjNoO9AE3g/maxresdefault.jpg');
+}
+#species36 {
+  background-image: url('https://i.ytimg.com/vi/_gNMWoPecAk/maxresdefault.jpg');
+}
+
+/* films */
+#film4 {
+  height: 250px;
+  background-image: url('https://hhspress.org/wp-content/uploads/2020/04/Hans-Leia-and-Luke-900x506.jpg');
+  background-size: 500px;
+}
+
+#film5 {
+  height: 250px;
+  background-image: url('https://cdn.rooftopfilms.com/wp-content/uploads/2023/07/l-intro-1682273776.jpg');
+  background-size: 500px;
+}
+
+#film6 {
+  height: 250px;
+  background-image: url('https://www.remindmagazine.com/wp-content/uploads/2023/04/Return-of-the-Jedi-1983-Han-Leia-Luke-1014x570.jpg');
+  background-size: 500px;
+}
+
+#film1 {
+  height: 250px;
+  background-image: url('https://static.tweaktown.com/content/9/5/9549_03_star-wars-episode-the-phantom-menace-4k-blu-ray-review_full.jpg');
+  background-size: 500px;
+}
+
+#film2 {
+  height: 250px;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1613622106884-P7HZ6NRBS1KT5ABGL7J9/AOTC.jpg');
+  background-size: 500px;
+}
+
+#film3 {
+  height: 250px;
+  background-image: url('https://cdn.vox-cdn.com/thumbor/uc3TOuJMiz9R9TRCb9tOutHlJT4=/0x0:1200x680/1200x800/filters:focal(103x220:295x412)/cdn.vox-cdn.com/uploads/chorus_image/image/65620847/revengeofthesith.0.jpg');
+  background-size: 500px;
+}
