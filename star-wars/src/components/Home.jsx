@@ -2,7 +2,7 @@
 const Home = () => {
     return (
         <div className="home">
-            <h1>This is Home!</h1>
+                <img className="poster" href='./assets/starwarsposter.jpeg'/>
         </div>
     )
 }

@@ -24,12 +24,11 @@ const FilmDetails = () => {
             <h4>Episode: {films.episode_id}</h4>
             <h4>Director: {films.director}</h4>
             <h4>Release Date: {films.release_date}</h4>
-            {/* <h4>Characters: {films.characters}</h4> */}
-            <Link to='/films'> Return to Films List</Link>
+            <button className='button-30'>
+                <Link to='/films'> Return to Films List</Link>
+            </button>
         </div>
-    ) : <h3>Finding films....</h3>
-
-
+    ) : <h3>Finding Films....</h3>
 }
 
 export default FilmDetails

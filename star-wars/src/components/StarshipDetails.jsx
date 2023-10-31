@@ -24,8 +24,9 @@ const StarshipDetails = () => {
             <h4>Crew: {starship.crew}</h4>
             <h4>Cargo: {starship.cargo_capacity}</h4>
             <h4>Passengers: {starship.passengers}</h4>
-            {/* <h4>Films: {starship.films[i]}</h4> */}
-            <Link to='/starships'> Return to Starship List</Link>
+            <button className='button-30'>
+                <Link to='/starships'> Return to Starship List</Link>
+            </button>
         </div>
     ) : <h3>Finding Starships....</h3>
 

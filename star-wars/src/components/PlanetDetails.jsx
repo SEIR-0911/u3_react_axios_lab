@@ -24,10 +24,11 @@ const planetDetails = () => {
             <h4>Population: {planet.population}</h4>
             <h4>Terrain: {planet.terrain}</h4>
             <h4>Climate: {planet.climate}</h4>
-            {/* <h4>Films: {planet.films[i]}</h4> */}
-            <Link to='/planets'> Return to planet List</Link>
+            <button className='button-30'>
+                <Link to='/planets'> Return to Planet List</Link>
+            </button>
         </div>
-    ) : <h3>Finding planets....</h3>
+    ) : <h3>Finding Planets....</h3>
 
 
 }

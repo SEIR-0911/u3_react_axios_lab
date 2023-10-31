@@ -27,7 +27,7 @@ const StarshipList = (props) => {
 
 
     if( !response ) {
-        return <h2>Let the Force be with you....</h2> //this is a guard operator that will show something while something else is missing or loading
+        return <h2>May the Force be with you....</h2> //this is a guard operator that will show something while something else is missing or loading
     } else {
         return(
             <div className="starship">

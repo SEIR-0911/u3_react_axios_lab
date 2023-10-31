@@ -25,8 +25,9 @@ const VehicleDetails = () => {
             <h4>Passengers: {vehicles.passengers}</h4>
             <h4>Model: {vehicles.model}</h4>
             <h4>Crew: {vehicles.crew}</h4>
-            {/* <h4>vehicles: {vehicles.vehicles}</h4> */}
-            <Link to='/vehicles'> Return to vehicles List</Link>
+            <button className='button-30'>
+                <Link to='/vehicles'> Return to Vehicles List</Link>
+            </button>
         </div>
     ) : <h3>Finding vehicles....</h3>
 

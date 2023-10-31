@@ -26,12 +26,11 @@ const CharacterDetails = () => {
             <h4>Eye Color: {characters.eye_color}</h4>
             <h4>Hair Color: {characters.hair_color}</h4>
             <h4>Gender: {characters.gender}</h4>
-            {/* <h4>Characters: {characters.characters}</h4> */}
-            <Link to='/characters'> Return to characters List</Link>
+            <button className='button-30'>
+                <Link to='/characters'> Return to Characters List</Link>
+            </button>
         </div>
-    ) : <h3>Finding characters....</h3>
-
-
+    ) : <h3>Finding Characters....</h3>
 }
 
 export default CharacterDetails
