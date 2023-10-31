@@ -16,7 +16,7 @@ const FilmList = () => {
 },[])
 
 if (!response) {
-    return <h1> Loading Please Wait...</h1>
+    return <h3> Loading Please Wait...</h3>
 } else {
     return(
         <div className="Film">

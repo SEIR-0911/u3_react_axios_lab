@@ -17,7 +17,6 @@ useEffect(()=>{
   getStarship()
 },[id])
 
-
 return starship ? (
   <div className="detail">
     <h2>Name: {starship.name}</h2>
@@ -29,7 +28,7 @@ return starship ? (
     <p>Crew Size: {starship.crew}</p>
     <p>Passengers: {starship.passengers}</p>
     <p>Cargo Capacity: {starship.cargo_capacity}</p>
-    <button><Link to="/starships"> Return to list</Link></button>
+    <button><Link to="/StarshipList"> Return to Starship List</Link></button>
   </div>
 ) : <h3>Finding Starship...</h3>
 }

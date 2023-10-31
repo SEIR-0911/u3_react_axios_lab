@@ -15,29 +15,30 @@ function StarshipList() {
     }
     getStarShips()
   }, [])
-
+  
   let navigate = useNavigate()
 
   // Function to navigate to the details page for a specific starship
   const showShip = (starshipId) => {
+    // Use the navigate function to go to the "/starships/{starshipId}" route
     navigate(`/starships/${starshipId}`)
   }
   return starShips ? (
-    <div className="starship">
+    <div className="starship-card">
         <h1>List of Starships</h1>
       {/* Map over the list of starships and display each one */}
-      {starShips.map((StarShip_id) => {
+      {starShips.map((AtStarShip_id) => {
         // Extract the starshipId from the URL using regular expression
-        const starshipId = StarShip_id.url.match(/(\d+)\/$/)[1];//Extract the numeric part from the URL (Reverse Engineered)
+        const starshipId = AtStarShip_id.url.match(/(\d+)\/$/)[1];//Extract the numeric part from the URL taken from the endpoint (Reverse Engineered)
         return (
           <div key={starshipId} onClick={() => showShip(starshipId)} className="starshipId-Card">
-            <h3>{StarShip_id.name}</h3>
+            <h3>{AtStarShip_id.name}</h3>
           </div>
         )
       })}
     </div>
   ) : 
-    <h3>Loading Starships Please Wait...</h3>
+    <h3>Loading Starships, Please Wait...</h3>
 }
 export default StarshipList;
 
