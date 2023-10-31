@@ -7,6 +7,8 @@ export default function Nav () {
             <Link to="/starships" className='link'>Starships</Link>
             <Link to="/planets" className='link'>Planets</Link>
             <Link to="/characters" className='link'>Characters</Link>
+            <Link to="/species" className='link'>Species</Link>
+            <Link to="/vehicles" className='link'>Vehicles</Link>
             <Link to="/films" className='link'>Films</Link>
         </div>
     )

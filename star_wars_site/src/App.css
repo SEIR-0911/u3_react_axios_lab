@@ -28,22 +28,13 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: orange;
 }
 
 .page {
-  margin: 30px;
-  /* background-color: orange; */
+  margin: 10px 30px 30px 30px;
 }
 
 /* Header and Nav */
-
-/* .header {
-  background-image: url('./assets/star-wars-backgroud.png');
-  background-size: 100%;
-  background-position: 60%;
-  height: 80vh;
-} */
 
 .title-nav {
   background-color: rgba(0, 0, 0, 0.5);
@@ -55,50 +46,156 @@
 .title-nav > h1 > .head-link {
   font-size: 4rem;
   /* color: #ffdca2; */
-  color: #fdb900;
+  color: rgb(253, 232, 72);
+  /* text-shadow: 0 0 20px rgb(251, 239, 144); */
   text-decoration: none;
 }
-
 h1 > .head-link:hover {
-  color: lightblue;
+  color: rgb(255, 178, 55);
+  /* text-shadow: 0 0 20px rgb(255, 144, 144); */
 }
-
 .nav > .link {
   color: white;
   margin: 0 30px;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   text-decoration: none;
 }
+.nav > .link:hover {
+  color: rgb(251, 239, 144);
+}
 .nav {
-  padding-bottom: 20px;
-  border-bottom: 2px solid #fdb900;
+  padding: 5px 10px 20px 10px;
+  border-bottom: 3px solid rgb(253, 232, 72);
 }
 
 /* Home Page */
+.home-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.home{
+  margin-top: 60px;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  background-image: url('https://media.sketchfab.com/models/423fb92f677f4448aef407112a1fc032/thumbnails/7e36d827bdcf44878cc88bac29409372/a6799554b2414d779d4fc2896e2e41b7.jpeg');
+  background-position: 48% 52%;
+  background-repeat: no-repeat;
+  background-size: 1195px;
+  box-shadow: 0 0 20px 5px rgba(251, 239, 144, .5), 0 0 30px 10px rgba(255, 255, 255, 0.563);
+}
+
 
 /* Grid Layout */
 .outer {
-  background-color: #161616;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: 1fr 1fr;
 }
 
 .card {
   margin: 20px;
   padding: 10px;
-  background-color: #363636;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 3px solid rgb(161, 147, 45);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 0 10px 5px rgb(69, 69, 8);
 }
 
-/* Page Styling */
+.film-card-info {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-.starship-outer {
+.go-back {
+  margin-top: 20px;
+  font-size: 2rem;
+  width: 200px;
+  height: 70px;
+  background-color: transparent;
+  border: 2px solid rgb(253, 232, 72);
+  border-radius: 20px;
+  transform: skew(-14deg);
+}
+
+/* Film Info */
+.film-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.film-scroll {
+  position: relative;
+  border-radius: 20px;
+  margin: 50px 0 100px 0;
+  width: 700px;
+  height: 300px;
+  perspective: 400px;
+  overflow: hidden;
+}
+.film-text {
+  margin: 10px;
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: 700;
+  width: 1200px;
+  color: rgb(253, 232, 72);
+  position: relative;
+  top: 0;
+  left: -250px;
+  transform-origin: 50% 100%;
+  transform: translateY(-450px);
+  animation: text-scroll 30s linear infinite;
+}
+
+/* Page Styling Headers */
+
+.starship-outer, .characters-outer, .planets-outer, .films-outer {
   margin-top: 50px;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.612);
+  border-radius: 30px;
 }
 .page-head {
-  font-size: 3rem;
+  font-size: 8rem;
   margin-bottom: 50px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.starship-head {
+  background-color: white;
+  background-image: url('https://img.redbull.com/images/q_auto,f_auto/redbullcom/2017/09/20/0bba35af-bf8c-4296-8cbd-1e4ccedfcc6a/star-wars-spaceships-millennium-falcon');
+  background-size: cover;
+  background-position: 50% 57%;
+}
+
+/* .planet-head {
+  background-color: white;
+  background-image: url('https://pyxis.nymag.com/v1/imgs/678/301/d2a5efd2076b212fcce0062f26ac06dbc8-naboo.2x.w710.jpg');
+  background-size: cover;
+  background-position: 50% 40%;
+} */
+
+.character-head, .species-head {
+  background-color: white;
+  background-image: url('https://spacequotations.com/wp-content/uploads/2018/09/star-wars-poster.jpg');
+  background-size: cover;
+  background-position: 0 65%;
+}
+
+.film-head, .planet-head, .vehicle-head {
+  background-color: white;
+  background-image: url('https://images4.alphacoders.com/131/thumb-1920-1313954.jpeg');
+  background-size: cover;
+  background-position: 0 40%;
 }

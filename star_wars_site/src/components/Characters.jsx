@@ -14,7 +14,7 @@ export default function Characters (props) {
     } else {
         return (
             <div className="characters-outer">
-                <h1 className="page-head">Characters</h1>
+                <h1 className="page-head character-head">Characters</h1>
                 <div className="outer">
                     {props.characters.map((person, index)=>(
                         <div className="character-card card" onClick={()=>showCharacter(person)} key={index}>
@@ -27,8 +27,8 @@ export default function Characters (props) {
                             </div>
                         </div>
                     ))}
-                    <button className="go-back"><Link to="/">Home</Link></button>
                 </div>
+                <button className="go-back"><Link to="/">Home</Link></button>
             </div>
         )
     }

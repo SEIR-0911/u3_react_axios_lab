@@ -13,7 +13,7 @@ export default function PlanetPage (props) {
     }, [props.planets, name])
 
     return (
-        <div className="planet-outer">
+        <div className="planets-outer">
             <h1>{planet.name}</h1>
         </div>
     )

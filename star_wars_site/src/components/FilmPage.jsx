@@ -12,7 +12,13 @@ export default function FilmPage (props) {
     
     return film ? (
         <div className="film-outer">
-            <h1>{film.title}</h1>
+            <h1 className="page-head film-head">{film.title}</h1>
+            <div className="film-scroll">
+                <div className="film-text">
+                    <h3>Episode {film.episode_id}</h3>
+                    <div>{film.opening_crawl}</div>
+                </div>
+            </div>
             <button className="go-back"><Link to="/films">All Films</Link></button>
         </div>
     ) : <h3>Not Found</h3>

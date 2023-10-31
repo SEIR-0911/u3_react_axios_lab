@@ -10,6 +10,8 @@ function App() {
   const [starships, setStarships] = useState([])
   const [planets, setPlanets] = useState([])
   const [characters, setCharacters] = useState([])
+  const [species, setSpecies] = useState([])
+  const [vehicles, setVehicles] = useState([])
   const [films, setFilms] = useState([])
 
   useEffect(()=>{
@@ -61,6 +63,38 @@ function App() {
   }, [])
   // console.log(characters)
   useEffect(()=>{
+    const getSpecies = async () => {
+      const allSpecies = []
+      const swapiGetCategory = async (url) => {
+        const response = await axios.get(url)
+        allSpecies.push(...response.data.results)
+        if (response.data.next){
+          swapiGetCategory(response.data.next)
+        }
+      }
+      swapiGetCategory(`${BASE_URL}/species`)
+      setSpecies(allSpecies)
+    }
+    getSpecies()
+  }, [])
+
+  useEffect(()=>{
+    const getVehicles = async () => {
+      const allVehicles = []
+      const swapiGetCategory = async (url) => {
+        const response = await axios.get(url)
+        allVehicles.push(...response.data.results)
+        if (response.data.next){
+          swapiGetCategory(response.data.next)
+        }
+      }
+      swapiGetCategory(`${BASE_URL}/vehicles`)
+      setVehicles(allVehicles)
+    }
+    getVehicles()
+  }, [])
+  // console.log(vehicles)
+  useEffect(()=>{
     const getFilms = async () => {
       const response = await axios.get(`${BASE_URL}/films`)
       // console.log(response.data.results)
@@ -72,7 +106,7 @@ function App() {
   return (
       <div className='page'>
         <Header />
-        <Main starships={starships} planets={planets} characters={characters} films={films}/>
+        <Main starships={starships} planets={planets} characters={characters} films={films} species={species} vehicles={vehicles} />
       </div>
   )
 }

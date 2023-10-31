@@ -15,7 +15,7 @@ export default function StarshipPage (props) {
     return starship ? (
         <div className="ship-outer">
             <div className="ship-detail">
-                <h1>{starship.name}</h1>
+                <h1 className="page-head starship-head">{starship.name}</h1>
                 <div className="ship-basics">
                     <div>Manufactor: {starship.manufacturer}</div>
                     <div>Model: {starship.model}</div>

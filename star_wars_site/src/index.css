@@ -23,6 +23,8 @@ h1 {
   font-family: 'Distant Galaxy', 'PT Sans', sans-serif;
 }
 
+/* animations */
+
 @keyframes move-background {
   0% {
         transform: translate3d(0px, 0px, 0px);
@@ -59,3 +61,59 @@ h1 {
     }
 }
 
+@keyframes text-scroll {
+  0% {
+    top: 300px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  /* 25% {
+    transform: translateY(250px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-250px);
+  } */
+  100% {
+    top: -2300px;
+    transform: rotateX(25deg) translateZ(-500px);
+  }
+}
+
+/* Pictures */
+#film4 {
+  height: 250px;
+  background-image: url('https://hhspress.org/wp-content/uploads/2020/04/Hans-Leia-and-Luke-900x506.jpg');
+  background-size: 500px;
+}
+
+#film5 {
+  height: 250px;
+  background-image: url('https://cdn.rooftopfilms.com/wp-content/uploads/2023/07/l-intro-1682273776.jpg');
+  background-size: 500px;
+}
+
+#film6 {
+  height: 250px;
+  background-image: url('https://www.remindmagazine.com/wp-content/uploads/2023/04/Return-of-the-Jedi-1983-Han-Leia-Luke-1014x570.jpg');
+  background-size: 500px;
+}
+
+#film1 {
+  height: 250px;
+  background-image: url('https://static.tweaktown.com/content/9/5/9549_03_star-wars-episode-the-phantom-menace-4k-blu-ray-review_full.jpg');
+  background-size: 500px;
+}
+
+#film2 {
+  height: 250px;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1613622106884-P7HZ6NRBS1KT5ABGL7J9/AOTC.jpg');
+  background-size: 500px;
+}
+
+#film3 {
+  height: 250px;
+  background-image: url('https://cdn.vox-cdn.com/thumbor/uc3TOuJMiz9R9TRCb9tOutHlJT4=/0x0:1200x680/1200x800/filters:focal(103x220:295x412)/cdn.vox-cdn.com/uploads/chorus_image/image/65620847/revengeofthesith.0.jpg');
+  background-size: 500px;
+}
