@@ -22,7 +22,7 @@ export default function StarshipPage (props) {
                     <div>Class: {starship.class}</div>
                 </div>
             </div>
-            <button className="go-back"><Link to='/starships'>Back to Starships</Link></button>
+            <button className="go-back"><Link to='/starships' className="link">Back to Starships</Link></button>
         </div>
     ) : null;
 }

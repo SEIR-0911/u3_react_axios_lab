@@ -25,10 +25,11 @@ export default function Characters (props) {
                                 <div>Height: {person.height}</div>
                                 <div>Birth Year: {person.birth_year}</div>
                             </div>
+                            <h3>Click for more info</h3>
                         </div>
                     ))}
                 </div>
-                <button className="go-back"><Link to="/">Home</Link></button>
+                <button className="go-back"><Link to="/" className="link">Home</Link></button>
             </div>
         )
     }

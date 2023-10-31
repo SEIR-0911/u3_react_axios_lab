@@ -19,7 +19,7 @@ export default function FilmPage (props) {
                     <div>{film.opening_crawl}</div>
                 </div>
             </div>
-            <button className="go-back"><Link to="/films">All Films</Link></button>
+            <button className="go-back"><Link to="/films" className="link">All Films</Link></button>
         </div>
     ) : <h3>Not Found</h3>
 }

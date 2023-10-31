@@ -1,3 +1,4 @@
+ /* Base Styling */
  #root {
   max-width: 1280px;
   margin: 0;
@@ -22,14 +23,12 @@
   z-index: -1;
   animation:move-background 10s linear infinite;
 }
-
 .base {
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
 }
-
 .page {
   margin: 10px 30px 30px 30px;
 }
@@ -45,14 +44,11 @@
 }
 .title-nav > h1 > .head-link {
   font-size: 4rem;
-  /* color: #ffdca2; */
   color: rgb(253, 232, 72);
-  /* text-shadow: 0 0 20px rgb(251, 239, 144); */
   text-decoration: none;
 }
 h1 > .head-link:hover {
   color: rgb(255, 178, 55);
-  /* text-shadow: 0 0 20px rgb(255, 144, 144); */
 }
 .nav > .link {
   color: white;
@@ -75,7 +71,6 @@ h1 > .head-link:hover {
   display: flex;
   justify-content: center;
 }
-
 .home{
   margin-top: 60px;
   height: 600px;
@@ -94,19 +89,39 @@ h1 > .head-link:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .card {
   margin: 20px;
   padding: 10px;
   background-color: rgb(0, 0, 0);
   border-radius: 20px;
   border: 3px solid rgb(161, 147, 45);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   box-shadow: 0 0 10px 5px rgb(69, 69, 8);
 }
 
+/* Card Styling for Specific Pages */
+/* species */
+.species-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+.species-card > h2 {
+  margin: 10px;
+  text-decoration: underline;
+}
+.specie-info, .vehicle-info {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+/* films */
+.films-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 .film-card-info {
   width: fit-content;
   height: fit-content;
@@ -114,16 +129,24 @@ h1 > .head-link:hover {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .go-back {
   margin-top: 20px;
   font-size: 2rem;
-  width: 200px;
-  height: 70px;
+  min-width: 200px;
+  min-height: 70px;
   background-color: transparent;
   border: 2px solid rgb(253, 232, 72);
   border-radius: 20px;
   transform: skew(-14deg);
+}
+.go-back > .link {
+  color: rgb(253, 232, 72);
+  text-decoration: none;
+  font-weight: 700;
+}
+.go-back:hover {
+  border-color: rgb(161, 147, 45);
+  box-shadow: 0 0 20px 10px rgba(161, 147, 45, 0.557);
 }
 
 /* Film Info */
@@ -171,28 +194,18 @@ h1 > .head-link:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .starship-head {
   background-color: white;
   background-image: url('https://img.redbull.com/images/q_auto,f_auto/redbullcom/2017/09/20/0bba35af-bf8c-4296-8cbd-1e4ccedfcc6a/star-wars-spaceships-millennium-falcon');
   background-size: cover;
   background-position: 50% 57%;
 }
-
-/* .planet-head {
-  background-color: white;
-  background-image: url('https://pyxis.nymag.com/v1/imgs/678/301/d2a5efd2076b212fcce0062f26ac06dbc8-naboo.2x.w710.jpg');
-  background-size: cover;
-  background-position: 50% 40%;
-} */
-
 .character-head, .species-head {
   background-color: white;
   background-image: url('https://spacequotations.com/wp-content/uploads/2018/09/star-wars-poster.jpg');
   background-size: cover;
   background-position: 0 65%;
 }
-
 .film-head, .planet-head, .vehicle-head {
   background-color: white;
   background-image: url('https://images4.alphacoders.com/131/thumb-1920-1313954.jpeg');

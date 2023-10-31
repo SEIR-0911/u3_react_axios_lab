@@ -14,7 +14,7 @@ export default function CharacterPage (props) {
     return character ? (
         <div className="character-out">
             <h1>{character.name}</h1>
-            <button className="go-back"><Link to="/characters">Back to Character List</Link></button>
+            <button className="go-back"><Link to="/characters" className="link">Back to Character List</Link></button>
         </div>
     ) : null;
 }

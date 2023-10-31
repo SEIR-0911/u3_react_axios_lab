@@ -15,11 +15,16 @@ export default function Vehicles (props) {
                     <div className="species-card card" onClick={() => showVehicles(vehicle)} key={index}>
                         <h2>{vehicle.name}</h2>
                         <div className="ship-basics">
+                            <div>Model: {vehicle.model}</div>
+                            <div>Manufacturer: {vehicle.manufacturer}</div>
+                            <div>Cost in Credits: {vehicle.cost_in_credits}</div>
+                            <div>Max Speed: {vehicle.max_atmosphering_speed}</div>
+                            <h3>Click for more info</h3>
                         </div>
                     </div>
                 ))}
             </div>
-            <button className="go-back"><Link to="/">Home</Link></button>
+            <button className="go-back"><Link to="/" className='link'>Home</Link></button>
         </div>
     )
 }

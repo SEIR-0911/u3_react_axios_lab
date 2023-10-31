@@ -15,6 +15,7 @@ export default function PlanetPage (props) {
     return (
         <div className="planets-outer">
             <h1>{planet.name}</h1>
+            <button className="go-back"><Link to="/planets" className="link">All Planets</Link></button>
         </div>
     )
 }

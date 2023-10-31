@@ -82,6 +82,75 @@ h1 {
 }
 
 /* Pictures */
+/* species */
+.species-img {
+  margin-top: 20px;
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 20px;
+}
+#species0 {
+  background-image: url('https://www.comingsoon.net/wp-content/uploads/sites/3/2019/12/1c26a74b72df5f698b296f569d12f976.jpg?w=800');
+}
+#species1 {
+  background-image: url('https://www.gamespot.com/a/uploads/screen_kubrick/1578/15789737/3311632-swdroids.jpg');
+}
+#species2 {
+  background-image: url('https://thefifthtrooper.com/wp-content/uploads/2021/07/wookiees.jpg');
+}
+#species3 {
+  background-image: url('https://i.ytimg.com/vi/gI7KD1OYBL0/maxresdefault.jpg');
+}
+#species4 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg');
+}
+#species5 {
+  background-image: url('https://www.looper.com/img/gallery/everything-we-know-about-yodas-species/intro-1574290530.jpg');
+}
+#species6 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/babwa-venomor-main_d6b841df.jpeg?region=237%2C0%2C1445%2C813');
+}
+#species7 {
+  background-image: url('https://www.looper.com/img/gallery/star-wars-the-mon-calamari-explained/intro-1605299609.jpg');
+}
+#species8 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_ewok_01_169_747db03a.jpeg?region=0%2C49%2C1560%2C780');
+}
+#species9 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_sullustan_01_169_01e4c3e0.jpeg?region=5%2C0%2C1170%2C878');
+}
+#species10 {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5fbc4a62c2150e62cfcb09aa/1625370308166-24PK51CZ3Q0UQT3JGB2S/Alex1.jpeg');
+}
+#species11 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/episode-112-gungan-general_a3e9b_50258ac2.jpeg?region=0,0,2048,1024');
+}
+#species12 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/databank_toydarian_01_169_748d4d11.jpeg?region=0%2C0%2C1560%2C780');
+}
+#species13 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/sebulba_1f3fe180.jpeg?region=5%2C0%2C1840%2C1380');
+}
+#species14 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/twi-lek-main_93917d40.jpeg?region=133%2C0%2C951%2C536');
+}
+#species15 {
+  background-image: url('https://lumiere-a.akamaihd.net/v1/images/acw_ia_77554_37f39ba8.jpeg');
+}
+#species16 {
+  background-image: url('https://i.pinimg.com/originals/54/bb/54/54bb549943e6660398d1a73cf3e07de7.jpg');
+}
+#species17 {
+  background-image: url('');
+}
+#species18 {
+  background-image: url('');
+}
+
+/* films */
 #film4 {
   height: 250px;
   background-image: url('https://hhspress.org/wp-content/uploads/2020/04/Hans-Leia-and-Luke-900x506.jpg');

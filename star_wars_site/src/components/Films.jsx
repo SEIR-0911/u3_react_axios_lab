@@ -24,7 +24,7 @@ export default function Films (props) {
                         </div>
                     ))}
                 </div>
-                <button className="go-back"><Link to="/">Home</Link></button>
+                <button className="go-back"><Link to="/" className="link">Home</Link></button>
             </div>
         )
     }
