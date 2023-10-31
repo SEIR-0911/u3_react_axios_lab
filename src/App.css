@@ -24,11 +24,17 @@ body {
     color: chartreuse;
 }
 
-h3 {
+h1, h3 {
     color: chartreuse;
     text-align: center;
 }
 
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
 
 .list-name{
     color: chartreuse;
