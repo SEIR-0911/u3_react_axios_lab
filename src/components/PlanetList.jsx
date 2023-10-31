@@ -13,19 +13,22 @@ const PlanetList = (props) => {
         }
 
         return (
-            <div className = "planet-grid">
-                <h2>List of Planets</h2>
-                {props.planets.map((planet, key) => (
-                    <div key = {key} onClick={() => showPlanet(key)} className="card">
-                        <h3>{planet.name}</h3>
-                        <ul>
-                            <li>Climate: {planet.climate}</li>
-                            <li>Terrain: {planet.terrain}</li> 
-                            <li>Population: {planet.population}</li>
-                        </ul>
-                    </div>
-                ))}
+            <div className= "list-container">
+                <h2 className="list-name">List of Planets</h2>
 
+                <div className = "grid">
+                    
+                    {props.planets.map((planet, key) => (
+                        <div key = {key} onClick={() => showPlanet(key)} className="card">
+                            <h3>{planet.name}</h3>
+                            <ul>
+                                <li>Climate: {planet.climate}</li>
+                                <li>Terrain: {planet.terrain}</li> 
+                                <li>Population: {planet.population}</li>
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     }

@@ -13,18 +13,20 @@ const PeopleList = (props) => {
         }
 
         return (
-            <div className = "people-grid">
-                <h2>List of Characters</h2>
-                {props.peoples.map((people, key) => (
-                    <div key = {key} onClick={() => showPeople(key)} className="card">
-                        <h3>{people.name}</h3>
-                        <ul>
-                            <li>Birth Year: {people.birth_year}</li>
-                            <li>Gender: {people.gender}</li>
-                        </ul>
-                    </div>
-                ))}
+            <div className="list-container">
+                <h2 className="list-name">List of Characters</h2>
+                <div className = "grid">
+                    {props.peoples.map((people, key) => (
+                        <div key = {key} onClick={() => showPeople(key)} className="card">
+                            <h3>{people.name}</h3>
+                            <ul>
+                                <li>Birth Year: {people.birth_year}</li>
+                                <li>Gender: {people.gender}</li>
+                            </ul>
+                        </div>
+                    ))}
 
+                </div>
             </div>
         )
     }

@@ -22,7 +22,7 @@ export default function PlanetDetails(){
 
 return planet ? (
     <div className = "detail">
-        <h2>{planet.name}</h2>
+        <h2 className="detail-title">{planet.name}</h2>
         <ul>
             <li>Rotation Period: {planet.rotation_period}</li>
             <li>Orbital Period: {planet.orbital_period}</li>
@@ -35,7 +35,7 @@ return planet ? (
             <li>Residents: {planet.residents}</li>
             <li>Films: {planet.films}</li>
         </ul>
-        <Link to = "/planets">Return to planet list</Link>
+        <button><Link to = "/planets">Return to planet list</Link></button>
     </div>
 ) : <h3> Finding planet...</h3>
 }

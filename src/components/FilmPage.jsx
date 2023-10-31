@@ -21,7 +21,7 @@ export default function FilmDetails(){
 
     return film ? (
         <div className="detail">
-            <h2>Title: {film.title}</h2>
+            <h2 className="detail-title">Title: {film.title}</h2>
             <ul>
                 <li>Episode: {film.episode_id}</li>
                 <li>Opening Crawl: {film.opening_crawl}</li>
@@ -34,7 +34,7 @@ export default function FilmDetails(){
                 <li>Vehicles: {film.vehicles}</li>
                 <li>Species: {film.species}</li>
             </ul>
-            <Link to ="/films">Return to Film List</Link>
+            <button><Link to ="/films">Return to Film List</Link></button>
         </div>
     ) : <h3> Finding film...</h3>
 }

@@ -22,7 +22,7 @@ export default function PeopleDetails(){
 
     return people ? (
         <div className="detail">
-            <h2>{people.name}</h2>
+            <h2 className="detail-title">{people.name}</h2>
                 <ul>
                     <li>Height: {people.height}</li>
                     <li>Mass: {people.mass}</li>
@@ -37,7 +37,7 @@ export default function PeopleDetails(){
                     <li>Vehicles: {people.vehicles}</li>
                     <li>Starships: {people.starships}</li>
                 </ul>
-                <Link to="/peoples">Return to Character List</Link>
+                <button><Link to="/peoples">Return to Character List</Link></button>
         </div>
     ) : <h3>Finding character...</h3>
 }
