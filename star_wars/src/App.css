@@ -1,0 +1,65 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+.detail{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #73140d;
+  text-align: center;
+}
+.card:hover {
+  background-color: #6539d4;
+}
+
+.Character {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
+  background-color: #f7f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Adjust the height as needed */
+  background-color: #333; /* Example background color */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.component {
+  margin-top: 20px;
+}
