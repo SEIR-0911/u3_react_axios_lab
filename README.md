@@ -1,6 +1,6 @@
 <img src="https://i.imgur.com/go18uJE.jpg">
 
-## SEIR 0911
+## SEBR 0116
 
 # Star Wars API -useEffect & React Router &ractice
 
@@ -17,7 +17,7 @@ In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/api/st
 1. Touch a .gitignore file and enter your /node_modules into it so that they are not pushed up to github
 1. Create a components folder and touch a number of files: Header, Nav, Main, Home, and StarshipList.jsx. Nest Nav inside of Header, and nest Header and Main inside of App.
 1. Import React-Router Dependencies (`npm i react-router-dom`)
-1. Create a Nav bar with a link to a "/starship" route, as well as a "/" route for your Landing page.
+1. Create a Nav bar with a link to a "/starships" route, as well as a "/" route for your Landing page.
 1. In your Main.jsx, set up Routes to render a `<StarshipsList />` Component in a "/starships" route, as well as a landing page "/" that renders your Home component.  (You can start with boilerplate components to get started). 
 1. Your Home component should load up when your react app first loads (localhost:3000/). It can have some Star Wars reference, or a meme, or it can just say "Welcome to our Page" if you're not into Star Wars or Memes.
 1. Test your react-router pathing is working to display the correct component
