@@ -1,0 +1,70 @@
+body {
+    background-image: url("./src/assets/space.png");
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid white;
+    width: 400px;
+    height: 250px;
+    margin: 20px;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 700px;
+    color: deepskyblue;
+    text-wrap: wrap;
+    
+}
+
+.detail-title{
+    text-align: center;
+    color: chartreuse;
+}
+
+h1, h3 {
+    color: chartreuse;
+    text-align: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.list-name{
+    color: chartreuse;
+    text-align: center;
+
+
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: yellow;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: deepskyblue;
+    border: 2px white;
+}
+
+.page-title {
+    color: chartreuse;
+    font-size: 85px;
+}
+
+ul{
+    list-style-type: none;
+}
